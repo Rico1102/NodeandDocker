@@ -1,6 +1,6 @@
 FROM node:13.7.0
-WORKDIR /Docker-image
+WORKDIR ../Docker-image
 COPY . .
 Run npm install
 EXPOSE 8000
-CMD ["run" , "npm" , "dev"]
+CMD ["npm" , "run" , "dev"]
