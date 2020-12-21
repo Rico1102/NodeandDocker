@@ -1,0 +1,5 @@
+{
+    "mongoURIAtlas": "mongodb+srv://r1c0:nodejs@cluster0.kt203.mongodb.net/DevConnector?retryWrites=true&w=majority",
+    "mongoURI": "mongodb://127.0.0.1:27017/DevConnector",
+    "secretKey": "aQpofekalkd2i1iSDAWedvldskmvou21skv)"
+}
