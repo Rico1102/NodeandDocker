@@ -1,18 +1,17 @@
-version : "3.0"
+version: "3.0"
 
 services:
-
   backend:
-    container_name : backendcontainer
-    build : .
-    ports : 
-      - "80:8000"
-    links : database
+    container_name: backendcontainer
+    build: .
+    ports:
+      - "8000:8000"
+    links: database
 
   database:
-    container_name : dbcontainer
-    image : mongo:4.4.2
-    ports : 
+    container_name: dbcontainer
+    image: mongo:4.4.2
+    ports:
       - "27017:27017"
-    volumes :
+    volumes:
       - ./data:/data/db
