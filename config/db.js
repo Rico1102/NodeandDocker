@@ -1,6 +1,6 @@
 const mongoose = require("mongoose"); //imported mongoose
 const config = require("config"); //imported config
-const dbURI = process.env['mongoURI'] ||config.get("mongoURI"); //imported mongoURI defined as global variable using config
+const dbURI = config.get("mongoURI"); //imported mongoURI defined as global variable using config
 
 const connectDB = async () => {
     try {
