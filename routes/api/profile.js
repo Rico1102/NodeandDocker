@@ -58,6 +58,7 @@ router.post(
                 company,
                 status,
                 skills,
+                location,
                 youtube,
                 instagram,
                 facebook,
@@ -72,11 +73,13 @@ router.post(
             profile.user = req.user.id;
             profile.firstname = firstname;
             profile.lastname = lastname;
-            profile.skills = skills;
+            profile.skills = skills.split();
+            profile.skills = profile.skills.map(skill => skill.trim());
             profile.status = status;
             if (company) profile.company = company;
             if (bio) profile.bio = bio;
             if (githubusername) profile.githubusername = githubusername;
+            if (location) profile.location = location;
             profile.social = {};
             if (youtube) profile.social.youtube = youtube;
             if (instagram) profile.social.instagram = instagram;

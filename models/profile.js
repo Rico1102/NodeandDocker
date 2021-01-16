@@ -31,6 +31,9 @@ const profileSchema = mongoose.Schema({
     githubusername: {
         type: String
     },
+    location : {
+        type: String
+    },
     experience: [{
         title: {
             type: String,

@@ -1,16 +1,18 @@
-version: "3.0"
+version: "3.8"
 
 services:
   backend:
     container_name: backendcontainer
+    restart: always
     build: .
     ports:
-      - "8000:8000"
-    links: 
+      - 8000:8000
+    depends_on: 
       - database
 
   database:
     container_name: dbcontainer
+    restart: always
     image: mongo:4.4.2
     ports:
       - "27017:27017"
